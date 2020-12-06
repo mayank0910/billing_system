@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bill Management</title>
+	<link rel="stylesheet" href="global.css">
+	<script  src="node_modules\chart.js\dist\Chart.js"></script>
+	<script  src="node_modules\jquery\dist\jquery.js"></script>
+	
+</head>
+<body style="background-color: #DCDCDC;">
+	
+		<h1 class="dash-header-title">Dashboard</h1>
+
+
+	
+
+<table class="dash_main_table">
+	<tr>
+		<td>
+			<div class="dash_item_card dash_item_1">
+				
+				
+					<div class="container">
+				<img src="images/cash-register.png" class="dash_icon">
+			
+					<h4><b>Purchase Entry</b></h4>
+					<p>Additional Info<p>
+					
+						
+					</div>
+				
+			</div>
+		</td>
+		<td>
+			<div class="dash_item_card dash_item_2">
+				<div class="container">
+					<img src="images/paper.png" class="dash_icon">
+					<h4><b>Quotation</b></h4>
+					<p>Additional Info<p>
+					</div>
+			</div>
+		</td>
+		<td>
+			<div class="dash_item_card dash_item_3">
+				<div class="container">
+					<img src="images/boxes.png" class="dash_icon">
+
+					<h4><b>Update/Adjust Stock</b></h4>
+					<p>Additional Info<p>
+					</div>
+			</div>
+		</td>
+
+	</tr>
+<tr>
+	<td>
+		<div class="dash_item_card dash_item_4">
+			<div class="container">
+				<img src="images/invoice.png" class="dash_icon">
+
+				<h4><b>Bill</b></h4>
+				<p>Additional Info<p>
+				</div>
+		</div>
+	</td>
+	<td>
+		<div class="dash_item_card dash_item_5">
+			<div class="container">
+				<img src="images/payment-method.png" class="dash_icon">
+
+				<h4><b>Vendor Payment</b></h4>
+				<p>Additional Info<p>
+				</div>
+		</div>
+	</td>
+	<td>
+		<div class="dash_item_card dash_item_6">
+			<div class="container">
+				<img src="images/payment-method.png" class="dash_icon">
+
+				<h4><b>Customer Payment</b></h4>
+				<p>Additional Info<p>
+				</div>
+		</div>
+	</td>
+
+	</tr>
+</table>
+<div  class = "dash_chart">
+	
+<canvas id="myChart" class="dash_graph1"></canvas>
+<script>
+	var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2020-12"],
+    datasets: [{
+      label: 'Sales Executed',
+      data: [12, 19, 3, 5, 2, 3, 20, 3, 5, 6, 2, 1],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      xAxes: [{
+        ticks: {
+          maxRotation: 90,
+          minRotation: 80
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+	</script>
+</div>
+</body>
+</html>
